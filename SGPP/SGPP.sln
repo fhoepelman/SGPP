@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogic", "BussinessLogic\BussinessLogic.csproj", "{ED3A2326-9B11-4B1A-87E6-564F9C3DC4AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplication", "Aplication\Aplication.csproj", "{F00A9320-4F1E-4B6A-802E-0617753495BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aPresentation", "Aplication\aPresentation.csproj", "{F00A9320-4F1E-4B6A-802E-0617753495BC}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
