@@ -8,11 +8,11 @@ using System.Data;
 
 namespace DataAccess
 {
-    class ClientesDA
+  public  class ClientesDA
     {
 
 
-        public void InsertClientes(string CodCliente, string Nombre, string Apellido,string Cedula,
+        public void InsertClientes (string CodCliente, string Nombre, string Apellido,string Cedula,
                                    string Genero,string Telefono,string Celular, string Fax,
                                     DateTime FechaNacimiento)
         {
@@ -20,7 +20,7 @@ namespace DataAccess
             SqlCommand ObjCmd = new SqlCommand("Sp_InsertClientes", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
 
-
+            Connection.Get.Open();
 
             SqlParameter PrmCodCliente = new SqlParameter("@CodCliente", CodCliente);
             PrmCodCliente.DbType = DbType.String;
@@ -41,11 +41,19 @@ namespace DataAccess
             SqlParameter PrmFechaNaci = new SqlParameter("@FechaNacimiento", FechaNacimiento);
             PrmFechaNaci.DbType = DbType.DateTime;
 
+            ObjCmd.Parameters.Add ( PrmCodCliente);
+            ObjCmd.Parameters.Add ( PrmNombre);
+            ObjCmd.Parameters.Add ( PrmApellido);
+            ObjCmd.Parameters.Add ( PrmCedula);
+            ObjCmd.Parameters.Add ( PrmGenero);
+            ObjCmd.Parameters.Add ( PrmTefono);
+            ObjCmd.Parameters.Add ( PrmCelular);
+            ObjCmd.Parameters.Add ( PrmFax);
+            ObjCmd.Parameters.Add ( PrmFechaNaci);
 
-            
-            
-        
+            ObjCmd.ExecuteNonQuery();
 
+            Connection.Get.Close();
 
         
         }

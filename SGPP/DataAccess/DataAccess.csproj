@@ -34,7 +34,6 @@
   <ItemGroup>
     <Compile Include="ClientesDA.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="Suplidores.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
