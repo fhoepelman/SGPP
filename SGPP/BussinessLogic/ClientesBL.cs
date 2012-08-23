@@ -8,6 +8,8 @@ namespace BussinessLogic
    public class ClientesBL
     {
 
+
+
         public void Clientes(string CodCliente, string Nombre, string Apellido,string Cedula,
                                    string Genero,string Telefono,string Celular, string Fax,
                                     DateTime FechaNacimiento)
@@ -25,6 +27,13 @@ namespace BussinessLogic
         
         
         
+        }
+
+
+
+        static void Main()
+        {
+
         }
 
     }

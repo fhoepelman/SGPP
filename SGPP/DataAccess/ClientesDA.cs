@@ -11,6 +11,10 @@ namespace DataAccess
   public  class ClientesDA
     {
 
+      static void Main()
+      { 
+
+      }
 
         public void InsertClientes (string CodCliente, string Nombre, string Apellido,string Cedula,
                                    string Genero,string Telefono,string Celular, string Fax,
