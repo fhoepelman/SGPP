@@ -105,23 +105,23 @@ namespace DataAccess
             SqlParameter PrmNoCuentaGar = new SqlParameter("@NoCuentaGar", NoCuentaGar);
 
 
-            ObjCmd.Parameters.Add   (PrmCodCliente.DbType = DbType.String);
-            ObjCmd.Parameters.Add   (PrmNombre.DbType = DbType.String);
-            ObjCmd.Parameters.Add  (PrmApellido.DbType = DbType.String);
-            ObjCmd.Parameters.Add ( PrmCedula);
-            ObjCmd.Parameters.Add ( PrmGenero);
-            ObjCmd.Parameters.Add ( PrmTefono);
-            ObjCmd.Parameters.Add ( PrmCelular);
-            ObjCmd.Parameters.Add ( PrmFax);
-            ObjCmd.Parameters.Add ( PrmFechaNaci);
-            ObjCmd.Parameters.Add (PrmCalleoAv);
-            ObjCmd.Parameters.Add (PrmNoVivienda);
-            ObjCmd.Parameters.Add (PrmSector);
-            ObjCmd.Parameters.Add (PrmEmail);
-            ObjCmd.Parameters.Add (PrmNoDependiente);
-            ObjCmd.Parameters.Add (PrmEmpresa);
+            ObjCmd.Parameters.Add(new SqlParameter ("@CodCliente",CodCliente).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Nombre",Nombre).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Apellido", Apellido).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Cedula", Cedula).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Genero", Genero).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Telefono", Telefono).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Celular", Celular).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Fax", Fax).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@FechaNacimiento", FechaNacimiento).DbType = DbType.DateTime);
+            ObjCmd.Parameters.Add(PrmCalleoAv);
+            ObjCmd.Parameters.Add(PrmNoVivienda);
+            ObjCmd.Parameters.Add(PrmSector);
+            ObjCmd.Parameters.Add(PrmEmail);
+            ObjCmd.Parameters.Add(PrmNoDependiente);
+            ObjCmd.Parameters.Add(PrmEmpresa);
 
-            ObjCmd.Parameters.Add (new SqlParameter("@CalleoAvEmpresa",CalleoAvEmpresa).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CalleoAvEmpresa",CalleoAvEmpresa).DbType = DbType.String);
             ObjCmd.Parameters.Add(PrmNoEmpresa.DbType = DbType.String);
             ObjCmd.Parameters.Add(PrmRNC.DbType = DbType.String);
             ObjCmd.Parameters.Add(PrmCiudadEmp.DbType = DbType.String);
