@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using Entidades;
 
 
-
+//Capa de Accesoo a Datos 
 namespace DataAccess
 {
+   
+    // Clase Para Manipular Clientes de la Capa de Accesoo
   public  class ClientesDA
     {
 
         Entidades.Clientes ObjClientes = new Entidades.Clientes();
       
+      //Metodo para insertar Clientes 
         public  void InsertClientes (string CodCliente, string Nombre, string Apellido,string Cedula, 
                                     string Genero,string Telefono,string Celular, string Fax,
                                     DateTime FechaNacimiento, string CalleoAv,string NoVivienda,
@@ -34,9 +36,9 @@ namespace DataAccess
 
             Connection.Get.Open();
    
-            ObjCmd.Parameters.Add(new SqlParameter ("@CodCliente",CodCliente).DbType = DbType.String);
-            ObjCmd.Parameters.Add(new SqlParameter("@Nombre",Nombre).DbType = DbType.String);
-            ObjCmd.Parameters.Add(new SqlParameter("@Apellido", Apellido).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CodCliente",CodCliente));
+            ObjCmd.Parameters.Add(new SqlParameter("@Nombre",Nombre));
+            ObjCmd.Parameters.Add(new SqlParameter("@Apellido", Apellido).SqlDbType = SqlDbType.NVarChar);
             ObjCmd.Parameters.Add(new SqlParameter("@Cedula", Cedula).DbType = DbType.String);
             ObjCmd.Parameters.Add(new SqlParameter("@Genero", Genero).DbType = DbType.String);
             ObjCmd.Parameters.Add(new SqlParameter("@Telefono", Telefono).DbType = DbType.String);

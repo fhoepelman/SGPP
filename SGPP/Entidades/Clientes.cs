@@ -48,6 +48,7 @@ namespace Entidades
 
         public string EmpresaGar { get; set; }
         public string CalleoAvEmpresaGar { get; set; }
+        public string NoEmpresaGar { get; set; }
         public string RNCGar { get; set; }
         public string CiudadEmpGar { get; set; }
         public string TelefonoEmpGar { get; set; }
