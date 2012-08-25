@@ -36,6 +36,10 @@
       <Project>{c543497b-20b7-4dc1-a47b-70de265112c7}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{dec052d9-8fec-45bf-a21d-e83518dade6f}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

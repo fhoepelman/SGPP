@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using Entidades;
+
 
 
 namespace DataAccess
@@ -11,12 +13,9 @@ namespace DataAccess
   public  class ClientesDA
     {
 
-      static void Main()
-      { 
-
-      }
-
-        public void InsertClientes (string CodCliente, string Nombre, string Apellido,string Cedula,
+        Entidades.Clientes ObjClientes = new Entidades.Clientes();
+      
+        public  void InsertClientes (string CodCliente, string Nombre, string Apellido,string Cedula, 
                                     string Genero,string Telefono,string Celular, string Fax,
                                     DateTime FechaNacimiento, string CalleoAv,string NoVivienda,
                                     string Sector,string Ciudad, string Email, string NoDependiente,
@@ -27,84 +26,14 @@ namespace DataAccess
                                     string CelularGar, string EmailGar, string Direccion, string DescripcionGarantia,
                                     string EmpresaGar, string CalleoAvEmpresaGar, string NoEmpresaGar, string RNCGar,
                                     string CiudadEmpGar, string TelefonoEmpGar, string FaxEmpGar, string PuestoGar,
-                                    decimal IngresosGar, DateTime FechaIngresoGar,string NoCuentaGar)
+                                    decimal IngresosGar, DateTime FechaIngresoGar,string NoCuentaGar )
         {
            
             SqlCommand ObjCmd = new SqlCommand("Sp_InsertClientes", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
 
             Connection.Get.Open();
-
-      
-            SqlParameter PrmCodCliente = new SqlParameter("@CodCliente", CodCliente);
-            PrmCodCliente.DbType = DbType.String;
-            SqlParameter PrmNombre = new SqlParameter("@Nombre", Nombre);
-            PrmNombre.DbType = DbType.String;
-            SqlParameter PrmApellido = new SqlParameter("@Apellido", Apellido);
-            PrmApellido.DbType = DbType.String;
-            SqlParameter PrmCedula = new SqlParameter("@Cedula", Cedula);
-            PrmCedula.DbType = DbType.String;
-            SqlParameter PrmGenero = new SqlParameter("@Genero", Genero);
-            PrmGenero.DbType = DbType.String;
-            SqlParameter PrmTefono = new SqlParameter("@Telefono", Telefono);
-            PrmTefono.DbType = DbType.String;
-            SqlParameter PrmCelular = new SqlParameter("@Celular", Celular);
-            PrmCelular.DbType = DbType.String;
-            SqlParameter PrmFax = new SqlParameter("@Fax", Fax);
-            PrmFax.DbType = DbType.String;
-            SqlParameter PrmFechaNaci = new SqlParameter("@FechaNacimiento", FechaNacimiento);
-            PrmFechaNaci.DbType = DbType.DateTime;
-
-            SqlParameter PrmCalleoAv = new SqlParameter("@CalleoAv", CalleoAv);
-            PrmCalleoAv.DbType = DbType.String;
-
-            SqlParameter PrmNoVivienda = new SqlParameter("@NoVivienda", NoVivienda);
-            PrmNoVivienda.DbType = DbType.String;
-
-            SqlParameter PrmSector = new SqlParameter("@Sector", Sector);
-            PrmSector.DbType = DbType.String;
-
-            SqlParameter PrmCiudad = new SqlParameter("@Ciudad", Ciudad);
-            PrmCiudad.DbType = DbType.String;
-            SqlParameter PrmEmail = new SqlParameter("@Email", Email);
-            PrmEmail.DbType = DbType.String;
-            SqlParameter PrmNoDependiente = new SqlParameter("@NoDependiente", NoDependiente);
-            PrmNoDependiente.DbType = DbType.String;
-
-            SqlParameter PrmEmpresa = new SqlParameter("@Empresa", Empresa);
-            PrmEmpresa.DbType = DbType.String; 
    
-
-            SqlParameter PrmCalleoAvEmpresa = new SqlParameter("@CalleoAvEmpresa",CalleoAvEmpresa);
-            SqlParameter PrmNoEmpresa = new SqlParameter("@NoEmpresa", NoEmpresa);
-            SqlParameter PrmRNC = new SqlParameter("@RNC", RNC);
-            SqlParameter PrmCiudadEmp = new SqlParameter("@CiudadEmp", CiudadEmp);
-            SqlParameter PrmTelefonoEmp = new SqlParameter("@TelefonoEmp", TelefonoEmp);
-            SqlParameter PrmFaxEmp = new SqlParameter("@FaxEmp",FaxEmp);
-            SqlParameter PrmPuesto = new SqlParameter("@Puesto", Puesto);
-            SqlParameter PrmIngresos = new SqlParameter("@Ingresos", Ingresos);
-            SqlParameter PrmFechaIngresos = new SqlParameter("@FechaIngresos",FechaIngreso);
-            SqlParameter PrmNoCuenta = new SqlParameter("@NoCuenta", NoCuenta);
-            SqlParameter PrmNombreGar = new SqlParameter("@NombreGar", NombreGar);
-            SqlParameter PrmApellidoGar = new SqlParameter("@ApellidoGar", ApellidoGar);
-            SqlParameter PrmCedulaGar = new SqlParameter("@CedulaGar", CedulaGar);
-            SqlParameter PrmTelefonoGar = new SqlParameter("@TelefonoGar", TelefonoGar);
-            SqlParameter PrmCelularGar = new SqlParameter("@CelularGar", CelularGar);
-            SqlParameter PrmEmailGar = new SqlParameter("@EmailGar", EmailGar);
-            SqlParameter PrmDireccion = new SqlParameter("@Direccion", Direccion);
-            SqlParameter PrmDescripcionGarantia = new SqlParameter("@DescripcionGarantia", DescripcionGarantia);
-            SqlParameter PrmEmpresaGar = new SqlParameter("@EmpresaGar", EmpresaGar);
-            SqlParameter PrmCalleoAvEmpresaGar = new SqlParameter("@CalleoAvEmpresaGar", CalleoAvEmpresaGar);
-            SqlParameter PrmRNCGar = new SqlParameter("@RNCGar", RNCGar);
-            SqlParameter PrmCiudadEmpGar = new SqlParameter("@CiudadEmpGar", CiudadEmpGar);
-            SqlParameter PrmTelefonoEmpGar = new SqlParameter("@TelefonoEmpGar", TelefonoEmpGar);
-            SqlParameter PrmFaxEmpGar = new SqlParameter("@FaxEmpGar", FaxEmpGar);
-            SqlParameter PrmPuestoGar = new SqlParameter("@PuestoGar", PuestoGar);
-            SqlParameter PrmIngresosGar = new SqlParameter("@IngresosGar", IngresosGar);
-            SqlParameter PrmFechaIngresoGar = new SqlParameter("@FechaIngresoGar", FechaIngresoGar);
-            SqlParameter PrmNoCuentaGar = new SqlParameter("@NoCuentaGar", NoCuentaGar);
-
-
             ObjCmd.Parameters.Add(new SqlParameter ("@CodCliente",CodCliente).DbType = DbType.String);
             ObjCmd.Parameters.Add(new SqlParameter("@Nombre",Nombre).DbType = DbType.String);
             ObjCmd.Parameters.Add(new SqlParameter("@Apellido", Apellido).DbType = DbType.String);
@@ -114,65 +43,44 @@ namespace DataAccess
             ObjCmd.Parameters.Add(new SqlParameter("@Celular", Celular).DbType = DbType.String);
             ObjCmd.Parameters.Add(new SqlParameter("@Fax", Fax).DbType = DbType.String);
             ObjCmd.Parameters.Add(new SqlParameter("@FechaNacimiento", FechaNacimiento).DbType = DbType.DateTime);
-            ObjCmd.Parameters.Add(PrmCalleoAv);
-            ObjCmd.Parameters.Add(PrmNoVivienda);
-            ObjCmd.Parameters.Add(PrmSector);
-            ObjCmd.Parameters.Add(PrmEmail);
-            ObjCmd.Parameters.Add(PrmNoDependiente);
-            ObjCmd.Parameters.Add(PrmEmpresa);
-
-            ObjCmd.Parameters.Add(new SqlParameter("@CalleoAvEmpresa",CalleoAvEmpresa).DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmNoEmpresa.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmRNC.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmCiudadEmp.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmTelefonoEmp.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmFaxEmp.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmPuesto.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmIngresos.DbType = DbType.Decimal);
-            ObjCmd.Parameters.Add(PrmFechaIngresos.DbType = DbType.DateTime);
-            ObjCmd.Parameters.Add(PrmNoCuenta.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmNombreGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmApellidoGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmCedulaGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmTelefonoGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmCelularGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmEmailGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmDireccion.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmDescripcionGarantia.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmEmpresaGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmRNCGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmCiudadEmpGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmTelefonoEmpGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmFaxEmpGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmPuestoGar.DbType = DbType.String);
-            ObjCmd.Parameters.Add(PrmIngresosGar.DbType = DbType.Decimal);
-            ObjCmd.Parameters.Add(PrmFechaIngresoGar.DbType = DbType.DateTime);
-            ObjCmd.Parameters.Add(PrmNoCuentaGar.DbType = DbType.String);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            ObjCmd.Parameters.Add(new SqlParameter("@CalleoAv", CalleoAv).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@NoVivienda", NoVivienda).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Sector", Sector).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Ciudad", Ciudad).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Email", Email).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Nodependiente", NoDependiente).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Empresa",Empresa).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CalleoAvEmpresa", CalleoAvEmpresa).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Noempresa", NoEmpresa).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@RNC", RNC).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CiudadEmp", CiudadEmp).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@TelefonoEmp", TelefonoEmp).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@FaxEmp", FaxEmp).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Puesto", Puesto).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Ingresos", Ingresos).DbType = DbType.Decimal);
+            ObjCmd.Parameters.Add(new SqlParameter("@FechaIngreso", FechaIngreso).DbType = DbType.DateTime);
+            ObjCmd.Parameters.Add(new SqlParameter("@NoCuenta", NoCuenta).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@NombreGar", NombreGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@ApellidoGar", ApellidoGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CedulaGar", CedulaGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@TelefonoGar", TelefonoGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CelularGar", CelularGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@EmailGar", EmailGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Direccion", Direccion).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@Descripciongarantia", DescripcionGarantia).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@EmpresaGar", EmpresaGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CalleoAvEmpresaGar", CalleoAvEmpresaGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@NoEmpresaGar", NoEmpresaGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@RNCgar", RNCGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@CiudadEmpGar", CiudadEmpGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@TelefonoEmpGar", TelefonoEmpGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@FaxEmpGar", FaxEmpGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@PuestoGar",PuestoGar).DbType = DbType.String);
+            ObjCmd.Parameters.Add(new SqlParameter("@IngresosGar", IngresosGar).DbType = DbType.Decimal);
+            ObjCmd.Parameters.Add(new SqlParameter("@FechaIngresoGar", FechaIngresoGar).DbType = DbType.DateTime);
+            ObjCmd.Parameters.Add(new SqlParameter("@NoCuentaGar", NoCuentaGar).DbType = DbType.String);
 
             ObjCmd.ExecuteNonQuery();
-
             Connection.Get.Close();
 
         
@@ -197,6 +105,11 @@ namespace DataAccess
 
         }
 
+
+        static void Main()
+        {
+
+        }
 
     }
 }

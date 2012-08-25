@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2EB02844-E777-472D-97EB-FF8B3E586906}</ProjectGuid>
+    <ProjectGuid>{DEC052D9-8FEC-45BF-A21D-E83518DADE6F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>aPresentation</RootNamespace>
-    <AssemblyName>aPresentation</AssemblyName>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,35 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Clientes.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="FrmPlantilla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPlantilla.Designer.cs">
-      <DependentUpon>FrmPlantilla.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="FrmPlantilla.resx">
-      <DependentUpon>FrmPlantilla.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BussinessLogic\BussinessLogic.csproj">
-      <Project>{ed3a2326-9b11-4b1a-87e6-564f9c3dc4ae}</Project>
-      <Name>BussinessLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{dec052d9-8fec-45bf-a21d-e83518dade6f}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

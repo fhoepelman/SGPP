@@ -15,13 +15,14 @@ namespace BussinessLogic
                                     DateTime FechaNacimiento)
         {
 
+
+
+
             
-
-
             DataAccess.ClientesDA objClientesDA = new DataAccess.ClientesDA();
 
 
-            objClientesDA.InsertClientes(CodCliente, Nombre, Apellido, Cedula, Genero, Telefono, Celular, Fax, FechaNacimiento);
+           objClientesDA.InsertClientes(CodCliente, Nombre, Apellido, Cedula, Genero, Telefono, Celular, Fax, FechaNacimiento);
         
         
         
