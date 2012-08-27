@@ -34,18 +34,7 @@ namespace aPresentation
             //Declaramos un Objeto de tipo Inteligencia de Negocios 
             BussinessLogic.ClientesBL ObjClientesBL = new BussinessLogic.ClientesBL();
 
-            ObjClientesBL.Clientes(ObjClientes.CodCliente, ObjClientes.Nombre, ObjClientes.Apellido, ObjClientes.Cedula,
-                                    ObjClientes.Genero, ObjClientes.Telefono, ObjClientes.Celular, ObjClientes.Fax,
-                                    ObjClientes.FechaNaci, ObjClientes.CalleoAv, ObjClientes.NoVivienda,
-                                    ObjClientes.Sector, ObjClientes.Ciudad, ObjClientes.Email, ObjClientes.Nodependiente,
-                                    ObjClientes.Empresa, ObjClientes.CalleoAvEmpresa, ObjClientes.NoEmpresa,
-                                    ObjClientes.RNC, ObjClientes.CiudadEmp, ObjClientes.TelefonoEmp, ObjClientes.FaxEmp,
-                                    ObjClientes.Puesto, ObjClientes.Ingresos, ObjClientes.FechaIngreso, ObjClientes.NoCuenta,
-                                    ObjClientes.NombreGar, ObjClientes.ApellidoGar, ObjClientes.CedulaGar, ObjClientes.TelefonoGar,
-                                    ObjClientes.CelularGar, ObjClientes.EmailGar, ObjClientes.DireccionGar, ObjClientes.DescripcionGarantia,
-                                    ObjClientes.EmpresaGar, ObjClientes.CalleoAvEmpresaGar, ObjClientes.NoEmpresaGar, ObjClientes.RNCGar,
-                                    ObjClientes.CiudadEmpGar, ObjClientes.TelefonoEmpGar, ObjClientes.FaxEmpGar, ObjClientes.PuestoGar,
-                                    ObjClientes.IngresosGar, ObjClientes.FechaIngresoGar, ObjClientes.NoCuentaGar);
+            ObjClientesBL.Clientes(ObjClientes);
 
         }
     }

@@ -59,10 +59,7 @@ namespace Entidades
         public string NoCuentaGar { get; set; }
 
 
-        static void Main()
-        {
-
-        }
+  
   
   }
 
