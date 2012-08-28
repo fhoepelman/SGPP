@@ -13,6 +13,7 @@ namespace BussinessLogic
 
         //Metodo para Recibir los datos de la capa de Presentacion y enviarlos a DataAccess
         public void Clientes (Entidades.Clientes ObjClientesEn)
+           
         {
 
 

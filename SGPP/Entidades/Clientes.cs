@@ -7,7 +7,7 @@ namespace Entidades
 {
   public  class Clientes
     {
-
+      //fijate que tienes get set
     
         public string CodCliente { get; set; }
         public string Nombre { get; set; }
@@ -62,6 +62,7 @@ namespace Entidades
   
   
   }
+
 
 
     }

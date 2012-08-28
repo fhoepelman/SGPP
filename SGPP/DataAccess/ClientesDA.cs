@@ -19,6 +19,7 @@ namespace DataAccess
       
       //Metodo para insertar Clientes 
         public  void InsertClientes (Entidades.Clientes ObjClientesEn)
+   
         {
            
             SqlCommand ObjCmd = new SqlCommand("Sp_InsertClientes", Connection.Get);
@@ -26,6 +27,7 @@ namespace DataAccess
 
             Connection.Get.Open();
    
+                                                                  
             ObjCmd.Parameters.Add(new SqlParameter("@CodCliente",ObjClientesEn.CodCliente));
             ObjCmd.Parameters.Add(new SqlParameter("@Nombre",ObjClientesEn.Nombre));
             ObjCmd.Parameters.Add(new SqlParameter("@Apellido", ObjClientesEn.Apellido) { SqlDbType = SqlDbType.NVarChar});
@@ -49,8 +51,8 @@ namespace DataAccess
             ObjCmd.Parameters.Add(new SqlParameter("@TelefonoEmp", ObjClientesEn.TelefonoEmp) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@FaxEmp", ObjClientesEn.FaxEmp) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Puesto", ObjClientesEn.Puesto) { SqlDbType = SqlDbType.NVarChar });
-            ObjCmd.Parameters.Add(new SqlParameter("@Ingresos", ObjClientesEn.Ingresos) { SqlDbType = SqlDbType.NVarChar });
-            ObjCmd.Parameters.Add(new SqlParameter("@FechaIngreso", ObjClientesEn.FechaIngreso) { SqlDbType = SqlDbType.NVarChar });
+            ObjCmd.Parameters.Add(new SqlParameter("@Ingresos", ObjClientesEn.Ingresos) { SqlDbType = SqlDbType.Decimal });
+            ObjCmd.Parameters.Add(new SqlParameter("@FechaIngreso", ObjClientesEn.FechaIngreso) { SqlDbType = SqlDbType.DateTime });
             ObjCmd.Parameters.Add(new SqlParameter("@NoCuenta", ObjClientesEn.NoCuenta) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@NombreGar", ObjClientesEn.NombreGar) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@ApellidoGar", ObjClientesEn.ApellidoGar) { SqlDbType = SqlDbType.NVarChar });
@@ -68,8 +70,8 @@ namespace DataAccess
             ObjCmd.Parameters.Add(new SqlParameter("@TelefonoEmpGar", ObjClientesEn.TelefonoEmpGar) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@FaxEmpGar", ObjClientesEn.FaxEmpGar) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@PuestoGar", ObjClientesEn.PuestoGar) { SqlDbType = SqlDbType.NVarChar });
-            ObjCmd.Parameters.Add(new SqlParameter("@IngresosGar", ObjClientesEn.IngresosGar) { SqlDbType = SqlDbType.NVarChar });
-            ObjCmd.Parameters.Add(new SqlParameter("@FechaIngresoGar", ObjClientesEn.FechaIngresoGar) { SqlDbType = SqlDbType.NVarChar });
+            ObjCmd.Parameters.Add(new SqlParameter("@IngresosGar", ObjClientesEn.IngresosGar) { SqlDbType = SqlDbType.Decimal });
+            ObjCmd.Parameters.Add(new SqlParameter("@FechaIngresoGar", ObjClientesEn.FechaIngresoGar) { SqlDbType = SqlDbType.DateTime });
             ObjCmd.Parameters.Add(new SqlParameter("@NoCuentaGar", ObjClientesEn.NoCuentaGar) { SqlDbType = SqlDbType.NVarChar });
 
             ObjCmd.ExecuteNonQuery();
