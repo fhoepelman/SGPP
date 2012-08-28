@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace aPresentation
+namespace aPresentation 
 {
     class Program
     {
@@ -15,7 +15,7 @@ namespace aPresentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPlantilla());
+            Application.Run(new FrmClientes());
         }
 
     }
