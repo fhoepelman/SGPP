@@ -19,15 +19,15 @@ namespace Entidades
         public string Fax { get; set; }
         public DateTime FechaNaci { get; set; }
         public string CalleoAv { get; set; }
-        public string NoVivienda { get; set; }
+        public decimal NoVivienda { get; set; }
         public string Sector { get; set; }
         public string Ciudad { get; set; }
         public string Email { get; set; }
-        public string Nodependiente { get; set; }
+        public decimal Nodependiente { get; set; }
 
         public string Empresa { get; set; }
         public string CalleoAvEmpresa { get; set; }
-        public string NoEmpresa { get; set; }
+        public decimal NoEmpresa { get; set; }
         public string RNC { get; set; }
         public string CiudadEmp { get; set; }
         public string TelefonoEmp { get; set; }
@@ -48,7 +48,7 @@ namespace Entidades
 
         public string EmpresaGar { get; set; }
         public string CalleoAvEmpresaGar { get; set; }
-        public string NoEmpresaGar { get; set; }
+        public decimal NoEmpresaGar { get; set; }
         public string RNCGar { get; set; }
         public string CiudadEmpGar { get; set; }
         public string TelefonoEmpGar { get; set; }
