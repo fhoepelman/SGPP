@@ -348,7 +348,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(263, 20);
             this.txtEmail.TabIndex = 15;
- 
             // 
             // txtCidudad
             // 
@@ -398,7 +397,7 @@
             this.txtFax.PromptChar = ' ';
             this.txtFax.Size = new System.Drawing.Size(194, 20);
             this.txtFax.TabIndex = 9;
-
+            this.txtFax.Validating += new System.ComponentModel.CancelEventHandler(this.txtFax_Validating);
             // 
             // txtCelular
             // 
@@ -409,7 +408,7 @@
             this.txtCelular.Size = new System.Drawing.Size(194, 20);
             this.txtCelular.TabIndex = 8;
             this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-  
+            this.txtCelular.Validating += new System.ComponentModel.CancelEventHandler(this.txtCelular_Validating);
             // 
             // txtTelefono
             // 
@@ -420,7 +419,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(194, 20);
             this.txtTelefono.TabIndex = 7;
             this.txtTelefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            
+            this.txtTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefono_Validating);
             // 
             // txtCedula
             // 
@@ -430,6 +429,7 @@
             this.txtCedula.PromptChar = ' ';
             this.txtCedula.Size = new System.Drawing.Size(194, 20);
             this.txtCedula.TabIndex = 5;
+            this.txtCedula.Validating += new System.ComponentModel.CancelEventHandler(this.txtCedula_Validating);
             // 
             // label4
             // 
@@ -652,7 +652,7 @@
             this.txtFaxEmpresa.PromptChar = ' ';
             this.txtFaxEmpresa.Size = new System.Drawing.Size(216, 20);
             this.txtFaxEmpresa.TabIndex = 23;
-     
+            this.txtFaxEmpresa.Validating += new System.ComponentModel.CancelEventHandler(this.txtFaxEmpresa_Validating);
             // 
             // txtTelefonoEmpresa
             // 
@@ -662,7 +662,7 @@
             this.txtTelefonoEmpresa.PromptChar = ' ';
             this.txtTelefonoEmpresa.Size = new System.Drawing.Size(216, 20);
             this.txtTelefonoEmpresa.TabIndex = 22;
-
+            this.txtTelefonoEmpresa.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefonoEmpresa_Validating);
             // 
             // label26
             // 
@@ -928,7 +928,7 @@
             this.txtCedulaGarante.PromptChar = ' ';
             this.txtCedulaGarante.Size = new System.Drawing.Size(205, 20);
             this.txtCedulaGarante.TabIndex = 33;
-
+            this.txtCedulaGarante.Validating += new System.ComponentModel.CancelEventHandler(this.txtCedulaGarante_Validating);
             // 
             // txtCelularGarante
             // 
@@ -939,7 +939,7 @@
             this.txtCelularGarante.Size = new System.Drawing.Size(205, 20);
             this.txtCelularGarante.TabIndex = 35;
             this.txtCelularGarante.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-           
+            this.txtCelularGarante.Validating += new System.ComponentModel.CancelEventHandler(this.txtCelularGarante_Validating);
             // 
             // txtTelefonoGarante
             // 
@@ -950,7 +950,7 @@
             this.txtTelefonoGarante.Size = new System.Drawing.Size(205, 20);
             this.txtTelefonoGarante.TabIndex = 34;
             this.txtTelefonoGarante.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-   
+            this.txtTelefonoGarante.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefonoGarante_Validating);
             // 
             // txtDescripcionGarantia
             // 
@@ -974,7 +974,6 @@
             this.txtEmailGarante.Name = "txtEmailGarante";
             this.txtEmailGarante.Size = new System.Drawing.Size(205, 20);
             this.txtEmailGarante.TabIndex = 36;
-
             // 
             // txtApellidoGarante
             // 
@@ -1143,6 +1142,7 @@
             this.txtFaxEmpresaGarante.PromptChar = ' ';
             this.txtFaxEmpresaGarante.Size = new System.Drawing.Size(216, 20);
             this.txtFaxEmpresaGarante.TabIndex = 45;
+            this.txtFaxEmpresaGarante.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtFaxEmpresaGarante_MaskInputRejected);
             // 
             // txtTelefonoEmpresaGarante
             // 
@@ -1152,6 +1152,7 @@
             this.txtTelefonoEmpresaGarante.PromptChar = ' ';
             this.txtTelefonoEmpresaGarante.Size = new System.Drawing.Size(216, 20);
             this.txtTelefonoEmpresaGarante.TabIndex = 44;
+            this.txtTelefonoEmpresaGarante.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefonoEmpresaGarante_MaskInputRejected);
             // 
             // label36
             // 

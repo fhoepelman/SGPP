@@ -19,11 +19,13 @@ namespace BussinessLogic
 
             //Aqui van las Validaciones de Lugar
 
+            //ValidarControles chare = new ValidarControles();
 
+            //chare.ValidarTelefono(ObjClientesEn.Telefono, "Holaaaa");
      
-                DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
+            //    DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
 
-                ObjClientesDA.InsertClientes(ObjClientesEn);
+            //    ObjClientesDA.InsertClientes(ObjClientesEn);
             
         
         
