@@ -26,10 +26,10 @@ namespace DataAccess
             ObjCmd.CommandType = CommandType.StoredProcedure;
 
             Connection.Get.Open();
-   
-                                                                  
-            ObjCmd.Parameters.Add(new SqlParameter("@CodCliente",ObjClientesEn.CodCliente));
-            ObjCmd.Parameters.Add(new SqlParameter("@Nombre",ObjClientesEn.Nombre));
+
+
+            ObjCmd.Parameters.Add(new SqlParameter("@CodCliente", ObjClientesEn.CodCliente) { SqlDbType = SqlDbType.NVarChar });
+            ObjCmd.Parameters.Add(new SqlParameter("@Nombre", ObjClientesEn.Nombre) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Apellido", ObjClientesEn.Apellido) { SqlDbType = SqlDbType.NVarChar});
             ObjCmd.Parameters.Add(new SqlParameter("@Cedula", ObjClientesEn.Cedula) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Genero", ObjClientesEn.Genero) { SqlDbType = SqlDbType.NVarChar });
@@ -93,12 +93,23 @@ namespace DataAccess
 
         }
 
-        public void SearchClientes()
+        public bool SearchClientes(Entidades.Clientes ObjClientesEn)
         {
+
+            SqlCommand ObjCmd = new SqlCommand("Sp_InsertClientes", Connection.Get);
+            ObjCmd.CommandType = CommandType.StoredProcedure;
+
+            Connection.Get.Open();
+
+            ObjCmd.Parameters.Add(new SqlParameter("@CodCliente", ObjClientesEn.CodCliente) { SqlDbType = SqlDbType.NVarChar });
+
+
+            return true;
 
 
         }
 
+   
 
    
 
