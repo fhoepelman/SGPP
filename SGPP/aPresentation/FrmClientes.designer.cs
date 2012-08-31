@@ -42,7 +42,7 @@
             this.NudNoVivienda = new System.Windows.Forms.NumericUpDown();
             this.NudNoDependientes = new System.Windows.Forms.NumericUpDown();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtCidudad = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
             this.txtSector = new System.Windows.Forms.TextBox();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.CmbGenero = new System.Windows.Forms.ComboBox();
@@ -79,7 +79,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.txtCiudadEmpresa = new System.Windows.Forms.TextBox();
             this.txtCalleEmpresa = new System.Windows.Forms.TextBox();
             this.txtNombreEmpresa = new System.Windows.Forms.TextBox();
             this.txtPuestoCliente = new System.Windows.Forms.TextBox();
@@ -295,7 +295,7 @@
             this.groupBox2.Controls.Add(this.NudNoVivienda);
             this.groupBox2.Controls.Add(this.NudNoDependientes);
             this.groupBox2.Controls.Add(this.txtEmail);
-            this.groupBox2.Controls.Add(this.txtCidudad);
+            this.groupBox2.Controls.Add(this.txtCiudad);
             this.groupBox2.Controls.Add(this.txtSector);
             this.groupBox2.Controls.Add(this.txtCalle);
             this.groupBox2.Controls.Add(this.CmbGenero);
@@ -348,13 +348,13 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(263, 20);
             this.txtEmail.TabIndex = 15;
-            // 
-            // txtCidudad
-            // 
-            this.txtCidudad.Location = new System.Drawing.Point(470, 100);
-            this.txtCidudad.Name = "txtCidudad";
-            this.txtCidudad.Size = new System.Drawing.Size(160, 20);
-            this.txtCidudad.TabIndex = 14;
+ // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(333, 73);
+  470, 100   this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 13);
+         160, 20);
+            this.txtCid.TabIndex = 14;
             // 
             // txtSector
             // 
@@ -397,7 +397,7 @@
             this.txtFax.PromptChar = ' ';
             this.txtFax.Size = new System.Drawing.Size(194, 20);
             this.txtFax.TabIndex = 9;
-            this.txtFax.Validating += new System.ComponentModel.CancelEventHandler(this.txtFax_Validating);
+          this.txtFax.Validating += new System.ComponentModel.CancelEventHandler(this.txtFax_Validating);
             // 
             // txtCelular
             // 
@@ -407,7 +407,7 @@
             this.txtCelular.PromptChar = ' ';
             this.txtCelular.Size = new System.Drawing.Size(194, 20);
             this.txtCelular.TabIndex = 8;
-            this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+        this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCelular.Validating += new System.ComponentModel.CancelEventHandler(this.txtCelular_Validating);
             // 
             // txtTelefono
@@ -416,7 +416,7 @@
             this.txtTelefono.Mask = "000-000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PromptChar = ' ';
-            this.txtTelefono.Size = new System.Drawing.Size(194, 20);
+            thiSize = new System.Drawing.Size(194, 20);
             this.txtTelefono.TabIndex = 7;
             this.txtTelefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefono_Validating);
@@ -559,7 +559,7 @@
             this.groupBox3.Controls.Add(this.txtNoCuenta);
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.txtSupervidorCliente);
-            this.groupBox3.Controls.Add(this.DtpFechaIngreso);
+            this.groupBox3.ControlEmpresas.Add(this.DtpFechaIngreso);
             this.groupBox3.Controls.Add(this.txtFaxEmpresa);
             this.groupBox3.Controls.Add(this.txtTelefonoEmpresa);
             this.groupBox3.Controls.Add(this.label26);
@@ -642,7 +642,7 @@
             this.DtpFechaIngreso.Location = new System.Drawing.Point(414, 128);
             this.DtpFechaIngreso.Name = "DtpFechaIngreso";
             this.DtpFechaIngreso.Size = new System.Drawing.Size(147, 20);
-            this.DtpFechaIngreso.TabIndex = 37;
+            this.DtpFechaIngreso.TabInde
             // 
             // txtFaxEmpresa
             // 
@@ -652,7 +652,7 @@
             this.txtFaxEmpresa.PromptChar = ' ';
             this.txtFaxEmpresa.Size = new System.Drawing.Size(216, 20);
             this.txtFaxEmpresa.TabIndex = 23;
-            this.txtFaxEmpresa.Validating += new System.ComponentModel.CancelEventHandler(this.txtFaxEmpresa_Validating);
+            this.txtFaxEmpresa.Vadating += new System.ComponentModel.CancelEventHandler(this.txtFaxEmpresa_Validating);
             // 
             // txtTelefonoEmpresa
             // 
@@ -684,12 +684,13 @@
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(333, 73);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 13);
-            this.label24.TabIndex = 19;
-            this.label24.Text = "Ingresos";
+            this.label24.AutoSize =Empresa
+            // 
+            this.txtCiudadEmpresa.Location = new System.Drawing.Point(88, 128);
+            this.txtCiudadEmpresa.Name = "txtCiudadEmpresa";
+            this.txtCiudadawing.Size(216, 20);
+            this.txtFaxEmpresa.TabIndex = 23;
+ CiudadEmpresa       this.label24.Text = "Ingresos";
             // 
             // label23
             // 
@@ -914,7 +915,7 @@
             this.groupBox5.Controls.Add(this.label30);
             this.groupBox5.Controls.Add(this.label29);
             this.groupBox5.Controls.Add(this.label28);
-            this.groupBox5.Location = new System.Drawing.Point(12, 14);
+            this.groupBox5.Location = newystem.Drawing.Point(12, 14);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(759, 189);
             this.groupBox5.TabIndex = 0;
@@ -926,7 +927,7 @@
             this.txtCedulaGarante.Mask = "000-0000000-0";
             this.txtCedulaGarante.Name = "txtCedulaGarante";
             this.txtCedulaGarante.PromptChar = ' ';
-            this.txtCedulaGarante.Size = new System.Drawing.Size(205, 20);
+            this.txtCSize = new System.Drawing.Size(205, 20);
             this.txtCedulaGarante.TabIndex = 33;
             this.txtCedulaGarante.Validating += new System.ComponentModel.CancelEventHandler(this.txtCedulaGarante_Validating);
             // 
@@ -936,7 +937,7 @@
             this.txtCelularGarante.Mask = "000-000-0000";
             this.txtCelularGarante.Name = "txtCelularGarante";
             this.txtCelularGarante.PromptChar = ' ';
-            this.txtCelularGarante.Size = new System.Drawing.Size(205, 20);
+            this.txlarGarante.Size = new System.Drawing.Size(205, 20);
             this.txtCelularGarante.TabIndex = 35;
             this.txtCelularGarante.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCelularGarante.Validating += new System.ComponentModel.CancelEventHandler(this.txtCelularGarante_Validating);
@@ -954,7 +955,7 @@
             // 
             // txtDescripcionGarantia
             // 
-            this.txtDescripcionGarantia.Location = new System.Drawing.Point(416, 71);
+            this.txtDescripcionGarantia.Lation = new System.Drawing.Point(416, 71);
             this.txtDescripcionGarantia.Multiline = true;
             this.txtDescripcionGarantia.Name = "txtDescripcionGarantia";
             this.txtDescripcionGarantia.Size = new System.Drawing.Size(310, 31);
@@ -1367,8 +1368,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(11, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label344, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Apellido";
             // 
@@ -1453,11 +1453,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label13;
+        private System.Window.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label9;Empresa
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -1540,28 +1540,4 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.NumericUpDown NudNoVivienda;
-        private System.Windows.Forms.TextBox txtDescripcionGarantia;
-        private System.Windows.Forms.TextBox txtDireccionGarante;
-        private System.Windows.Forms.TextBox txtEmailGarante;
-        private System.Windows.Forms.TextBox txtApellidoGarante;
-        private System.Windows.Forms.TextBox txtNombreGarante;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ErrorProvider ErrProClientes;
-        private System.Windows.Forms.MaskedTextBox TxtRnc;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.MaskedTextBox txtTelefonoEmpresa;
-        private System.Windows.Forms.MaskedTextBox txtCedulaGarante;
-        private System.Windows.Forms.MaskedTextBox txtCelularGarante;
-        private System.Windows.Forms.MaskedTextBox txtTelefonoGarante;
-        private System.Windows.Forms.NumericUpDown NudNoEmpresa;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox cmbEstatus;
-        private System.Windows.Forms.TabPage tbpDatosLaboralesCli;
-        private System.Windows.Forms.Label label48;
-    }
-}
+        private System.Windows.Forms.Label label
