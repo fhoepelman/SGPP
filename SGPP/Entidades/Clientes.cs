@@ -58,7 +58,7 @@ namespace Entidades
         public DateTime FechaIngresoGar { get; set; }
         public string NoCuentaGar { get; set; }
 
-
+        public string Accion { get; set; }
   
   
   }
