@@ -1,66 +1,163 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using Entidades;
-using BussinessLogic;
-using BussinessLogic;
+using SCP.Clases;
+using System.Data.SqlClient;
+using System.Data;
+using System.Collections.Generic;
+using SCP.Entidades;
 
 
 
-
-namespace aPresentation
+namespace SCP
 {
-    public partial class FrmClientes : FrmPlantla
+    public partial class FrmClientes : FrmPlantilla 
     {
 
         ValidarControles VC = new ValidarControles();
-        //AdministrarControles AC = new AdministrarControles();
-
+        AdministrarControles AC = new AdministrarControles();
+    
 
         public FrmClientes()
-  InitializeComponent();
+        {
+            InitializeComponent();
             btnNuevo.Click += new EventHandler(btnNuevo_Click);
-            btnGuardar.Click += new EventHandler(btnGuardartHandler(btnNuevo_Click);
 
-            
-            btnGuardar.Click += new EventHandler(b           
         }
 
-        void btnGuardar_Click(object sender, EventArgs e)
+        void btnNuevo_Click(object sender, EventArgs e)
         {
 
-            Entidades.Clientes ObjClientesEn = new Entidades.Clientes();
+            Cliente x = new Cliente();
+            x.FaxEmp = "asdf";
+            
 
 
-            ObjClientesEn.CodCliente = txtCliente.Text;
-            ObjClientesEn.Nombre = txtNombre.Text;
-            ObjClientesEn.Apellido = txtApellido.Text;
-            ObjClientesEn.Cedula = txtCedula.Text;
-            ObjClientesEn.Genero = CmbGenero.Text;
-            ObjClientesEn.Telefono = txtTelefono.Text;
-            ObjClientesEn.Celular = txtCelular.Text;
-            ObjClientesEn.Fax = txtFax.Text;
-            ObjClientesEn.FechaNaci = DtpFechaNaci.Value;
-            ObjClientesEn.CalleoAv = txtCalle.Text;
-            ObjClientesEn.NoVivienda = NudNoVivienda.Value;
-            ObjClientesEn.Sector = txtSector.Text;
-            ObjClientesEn.Ciudad = txtCiudadEmpresa.Text;
-            ObjClientesEn.Email = txtEmail.Text;
-            ObjClientesEn.Nodependiente = NudNoDependientes.Value;
-            ObjClientesEn.Empresa = txtNombreEmpresa.Text;
-            ObjClientesEn.CalleoAvEmpresa = txtCalleEmpresa.Text;
-            ObjClientesEn.NoEmpresa = NudNoEmpresa.Value;
-            ObjClientesEn.RNC = TxtRnc.Text;
-            ObjClientesEn.CiudadEmp = txtCiudadEmpresa.Text;
+
+           
            
         }
 
 
+
+        private void FrmClientes_Load(object sender, EventArgs e)
+        {
+
+            //AC.ColorText(this, System.Drawing.Color.LightSteelBlue);
+            //AC.DeshabilitarDGV(this);
+            //AC.DeshabilitarText(this);
+            //AC.DeshabilitarMaskText(this);
+            //AC.ColorMaskText(this, System.Drawing.Color.LightSteelBlue);
+
+        }
+
+        private void txtTelefono_Validated(object sender, EventArgs e)
+        {
+
+            VC.ValidarTelefono(txtTelefono, "El Campo Telefono Esta Incorrecto");
+            
+        }
+
+        private void txtCelular_Validated(object sender, EventArgs e)
+        {
+           
+            VC.ValidarTelefono(txtCelular, "El Campo Celular Esta Incorrecto");
+        }
+
+        private void txtFax_Validated(object sender, EventArgs e)
+        {
+            
+            VC.ValidarTelefono(txtFax, "El Campo Fax Esta Incorrecto");
+            
+        }
+
+        private void txtTelefonoEmpresa_Validated(object sender, EventArgs e)
+        {
+     
+            VC.ValidarTelefono(txtTelefonoEmpresa, "El Campo Telefono Esta Incorrecto");
+        }
+
+        private void txtFaxEmpresa_Validated(object sender, EventArgs e)
+        {
+          
+            VC.ValidarTelefono(txtFaxEmpresa, "El Campo Telefono Esta Incorrecto");
+        }
+
+        private void txtTelefonoGarante_Validated(object sender, EventArgs e)
+        {
+         
+            VC.ValidarTelefono(txtTelefonoGarante, "El Campo Telefono Esta Incorrecto");
+        }
+
+        private void txtCelularGarante_Validated(object sender, EventArgs e)
+        {
+         
+            VC.ValidarTelefono(txtCelularGarante, "El Campo Celular Esta Incorrecto");
+        }
+
+        private void txtCedula_Validated(object sender, EventArgs e)
+        {
+
+            bool Resultado;
+            txtCedula.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
+            if (txtCedula.Text.Length != 0)
+            {
+
+                Resultado = ValidarControles.ValidaCedula(txtCedula);
+
+                if (Resultado == true)
+                {
+                    ErrProClientes.SetError(txtCedula, null);
+                }
+                else
+                {
+                    ErrProClientes.SetError(txtCedula, "La Cedula Es Incorrecta");
+                    txtCedula.Focus();
+                }
+            }
+            else
+            {
+                ErrProClientes.SetError(txtCedula, null);
+            }
+        }
+
+        private void txtCedulaGarante_Validated(object sender, EventArgs e)
+        {
+            bool Resultado;
+            txtCedulaGarante.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
+            if (txtCedulaGarante.Text.Length != 0)
+            {
+                Resultado = ValidarControles.ValidaCedula(txtCedulaGarante);
+
+                if (Resultado == true)
+                {
+                    ErrProClientes.SetError(txtCedulaGarante, null);
+                }
+                else
+                {
+                    ErrProClientes.SetError(txtCedulaGarante, "La Cedula Es Incorrecta");
+                    txtCedulaGarante.Focus();
+                }
+            }
+            else
+            {
+                ErrProClientes.SetError(txtCedulaGarante, null);
+            }
+        }
+
+        private void txtEmail_Validated(object sender, EventArgs e)
+        {
+            VC.ValidarEmail(txtEmail);
+        }
+
+        private void txtEmailGarante_Validated(object sender, EventArgs e)
+        {
+       
+            VC.ValidarEmail(txtEmailGarante);
+        }
+
+    
 
     }
 }
