@@ -23,9 +23,11 @@ namespace BussinessLogic
 
             //chare.ValidarTelefono(ObjClientesEn.Telefono, "Holaaaa");
      
-            //    DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
 
-            //    ObjClientesDA.InsertClientes(ObjClientesEn);
+
+            DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
+
+            ObjClientesDA.InsertClientes(ObjClientesEn);
             
         
         
