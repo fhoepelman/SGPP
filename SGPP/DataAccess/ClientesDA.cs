@@ -22,7 +22,7 @@ namespace DataAccess
    
         {
            
-            SqlCommand ObjCmd = new SqlCommand("Sp_Insert", Connection.Get);
+            SqlCommand ObjCmd = new SqlCommand("Sp_Insert_Cli", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
 
             Connection.Get.Open();
@@ -96,7 +96,7 @@ namespace DataAccess
         public bool SearchClientes(Entidades.Clientes ObjClientesEn)
         {
 
-            SqlCommand ObjCmd = new SqlCommand("Sp_InsertClientes", Connection.Get);
+            SqlCommand ObjCmd = new SqlCommand("Sp_Search_Cli", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
 
             Connection.Get.Open();
