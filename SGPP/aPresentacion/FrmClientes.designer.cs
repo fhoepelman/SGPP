@@ -122,6 +122,9 @@
             this.label28 = new System.Windows.Forms.Label();
             this.tbpDatosLaboralesGar = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtRNCGar = new System.Windows.Forms.MaskedTextBox();
+            this.NudNoEmpresaGar = new System.Windows.Forms.NumericUpDown();
             this.txtNoCuentaGarante = new System.Windows.Forms.MaskedTextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.txtSupervisorGarante = new System.Windows.Forms.TextBox();
@@ -155,9 +158,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ErrProClientes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.NudNoEmpresaGar = new System.Windows.Forms.NumericUpDown();
-            this.txtRNCGar = new System.Windows.Forms.MaskedTextBox();
-            this.label49 = new System.Windows.Forms.Label();
             this.tbControlPrincipal.SuspendLayout();
             this.tbpMaestro.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -178,9 +178,9 @@
             this.groupBox5.SuspendLayout();
             this.tbpDatosLaboralesGar.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NudNoEmpresaGar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrProClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NudNoEmpresaGar)).BeginInit();
             this.SuspendLayout();
             // 
             // tbControlPrincipal
@@ -1110,6 +1110,37 @@
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(616, 137);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(47, 13);
+            this.label49.TabIndex = 53;
+            this.label49.Text = "Ingresos";
+            // 
+            // txtRNCGar
+            // 
+            this.txtRNCGar.Location = new System.Drawing.Point(619, 153);
+            this.txtRNCGar.Mask = "000-000-0000";
+            this.txtRNCGar.Name = "txtRNCGar";
+            this.txtRNCGar.PromptChar = ' ';
+            this.txtRNCGar.Size = new System.Drawing.Size(118, 20);
+            this.txtRNCGar.TabIndex = 52;
+            // 
+            // NudNoEmpresaGar
+            // 
+            this.NudNoEmpresaGar.Enabled = false;
+            this.NudNoEmpresaGar.Location = new System.Drawing.Point(88, 71);
+            this.NudNoEmpresaGar.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NudNoEmpresaGar.Name = "NudNoEmpresaGar";
+            this.NudNoEmpresaGar.Size = new System.Drawing.Size(160, 20);
+            this.NudNoEmpresaGar.TabIndex = 51;
+            // 
             // txtNoCuentaGarante
             // 
             this.txtNoCuentaGarante.Location = new System.Drawing.Point(414, 157);
@@ -1360,6 +1391,7 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(140, 20);
             this.txtCliente.TabIndex = 0;
+            this.txtCliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtCliente_Validating);
             // 
             // label3
             // 
@@ -1391,37 +1423,6 @@
             // ErrProClientes
             // 
             this.ErrProClientes.ContainerControl = this;
-            // 
-            // NudNoEmpresaGar
-            // 
-            this.NudNoEmpresaGar.Enabled = false;
-            this.NudNoEmpresaGar.Location = new System.Drawing.Point(88, 71);
-            this.NudNoEmpresaGar.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.NudNoEmpresaGar.Name = "NudNoEmpresaGar";
-            this.NudNoEmpresaGar.Size = new System.Drawing.Size(160, 20);
-            this.NudNoEmpresaGar.TabIndex = 51;
-            // 
-            // txtRNCGar
-            // 
-            this.txtRNCGar.Location = new System.Drawing.Point(619, 153);
-            this.txtRNCGar.Mask = "000-000-0000";
-            this.txtRNCGar.Name = "txtRNCGar";
-            this.txtRNCGar.PromptChar = ' ';
-            this.txtRNCGar.Size = new System.Drawing.Size(118, 20);
-            this.txtRNCGar.TabIndex = 52;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(616, 137);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(47, 13);
-            this.label49.TabIndex = 53;
-            this.label49.Text = "Ingresos";
             // 
             // FrmClientes
             // 
@@ -1455,10 +1456,10 @@
             this.tbpDatosLaboralesGar.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NudNoEmpresaGar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrProClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NudNoEmpresaGar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

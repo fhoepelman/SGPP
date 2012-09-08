@@ -204,6 +204,11 @@ namespace aPresentacion
             VC.ValidarEmail(txtEmailGarante);
         }
 
+        private void txtCliente_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
     
 
     }
