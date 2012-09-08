@@ -50,6 +50,17 @@ namespace aPresentacion
             ObjClientesEntidad.Sector = txtSector.Text;
             ObjClientesEntidad.Ciudad = txtCiudad.Text;
             ObjClientesEntidad.Email = txtEmail.Text;
+            ObjClientesEntidad.Nodependiente = NudNoDependientes.Value;
+            
+            ObjClientesEntidad.Empresa = txtNombreEmpresa.Text;
+            ObjClientesEntidad.CalleoAvEmpresa = txtCalleEmpresa.Text;
+            ObjClientesEntidad.NoEmpresa = NudNoEmpresa.Value;
+            ObjClientesEntidad.RNC = TxtRnc.Text;
+            ObjClientesEntidad.CiudadEmp = txtCiudad.Text;
+            ObjClientesEntidad.TelefonoEmp = txtTelefonoEmpresa.Text;
+            ObjClientesEntidad.FaxEmp = txtFaxEmpresa.Text;
+            ObjClientesEntidad.Puesto = txtPuestoCliente.Text;
+            ObjClientesEntidad.Ingresos = 
            
         }
 
