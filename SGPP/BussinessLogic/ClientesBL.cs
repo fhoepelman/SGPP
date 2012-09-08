@@ -27,7 +27,10 @@ namespace BussinessLogic
 
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
 
+      
+            
             ObjClientesDA.InsertClientes(ObjClientesEntidad);
+
             
         
         
