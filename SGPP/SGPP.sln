@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogic", "Bussiness
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{DEC052D9-8FEC-45BF-A21D-E83518DADE6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aPresentacion", "aPresentacion\aPresentacion.csproj", "{CDFABDD5-DCE0-4ED7-B9D2-9A31F0EC4701}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Manager = AnkhSVN - Subversion Support for Visual Studio
@@ -21,6 +23,10 @@ Global
 		{C543497B-20B7-4DC1-A47B-70DE265112C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C543497B-20B7-4DC1-A47B-70DE265112C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C543497B-20B7-4DC1-A47B-70DE265112C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDFABDD5-DCE0-4ED7-B9D2-9A31F0EC4701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFABDD5-DCE0-4ED7-B9D2-9A31F0EC4701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFABDD5-DCE0-4ED7-B9D2-9A31F0EC4701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFABDD5-DCE0-4ED7-B9D2-9A31F0EC4701}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DEC052D9-8FEC-45BF-A21D-E83518DADE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DEC052D9-8FEC-45BF-A21D-E83518DADE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEC052D9-8FEC-45BF-A21D-E83518DADE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
