@@ -35,7 +35,21 @@ namespace aPresentacion
 
             Entidades.Clientes ObjClientesEntidad = new Entidades.Clientes();
 
-           
+            ObjClientesEntidad.CodCliente = txtCliente.Text;
+            ObjClientesEntidad.Nombre = txtNombre.Text;
+            ObjClientesEntidad.Apellido = txtApellido.Text;
+            ObjClientesEntidad.Cedula = txtCedula.Text;
+            ObjClientesEntidad.Genero = CmbGenero.Text;
+            ObjClientesEntidad.Telefono = txtTelefono.Text;
+            ObjClientesEntidad.Celular = txtCelular.Text;
+            ObjClientesEntidad.Fax = txtFax.Text;
+            ObjClientesEntidad.FechaNaci = DtpFechaNaci.Value;
+
+            ObjClientesEntidad.CalleoAv = txtCalle.Text;
+            ObjClientesEntidad.NoVivienda = NudNoVivienda.Value;
+            ObjClientesEntidad.Sector = txtSector.Text;
+            ObjClientesEntidad.Ciudad = txtCiudad.Text;
+            ObjClientesEntidad.Email = txtEmail.Text;
            
         }
 
