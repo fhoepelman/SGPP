@@ -60,8 +60,27 @@ namespace aPresentacion
             ObjClientesEntidad.TelefonoEmp = txtTelefonoEmpresa.Text;
             ObjClientesEntidad.FaxEmp = txtFaxEmpresa.Text;
             ObjClientesEntidad.Puesto = txtPuestoCliente.Text;
-            ObjClientesEntidad.Ingresos = 
-           
+           //Componente de Ingresos
+            ObjClientesEntidad.Ingresos = NudNoDependientes.Value;
+            ObjClientesEntidad.FechaIngreso = DtpFechaIngreso.Value;
+            ObjClientesEntidad.NoCuenta = txtNoCuenta.Text;
+
+            ObjClientesEntidad.NombreGar = txtNombreGarante.Text;
+            ObjClientesEntidad.ApellidoGar = txtApellidoGarante.Text;
+            ObjClientesEntidad.CedulaGar = txtCedulaGarante.Text;
+            ObjClientesEntidad.TelefonoGar = txtTelefonoGarante.Text;
+            ObjClientesEntidad.CedulaGar = txtCelular.Text;
+            ObjClientesEntidad.EmailGar = txtEmail.Text;
+            ObjClientesEntidad.DireccionGar = txtDireccionGarante.Text;
+            ObjClientesEntidad.DescripcionGarantia = txtDescripcionGarantia.Text;
+
+            ObjClientesEntidad.EmpresaGar = txtEmpresaGarante.Text;
+            ObjClientesEntidad.CalleoAvEmpresaGar = txtCalleEmpresaGarante.Textf;
+            ObjClientesEntidad.NoEmpresaGar = NudNoEmpresaGar.Value;
+            ObjClientesEntidad.RNCGar = txtRNCGar.Text;
+            
+
+
         }
 
 

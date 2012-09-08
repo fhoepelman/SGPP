@@ -134,7 +134,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.txtCiudadEmpresaGarante = new System.Windows.Forms.TextBox();
             this.txtSectorEmpresaGarante = new System.Windows.Forms.TextBox();
-            this.txtNoEmpresaGarante = new System.Windows.Forms.TextBox();
             this.txtCalleEmpresaGarante = new System.Windows.Forms.TextBox();
             this.txtEmpresaGarante = new System.Windows.Forms.TextBox();
             this.txtPuestoEmpresaGarante = new System.Windows.Forms.TextBox();
@@ -156,6 +155,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ErrProClientes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NudNoEmpresaGar = new System.Windows.Forms.NumericUpDown();
+            this.txtRNCGar = new System.Windows.Forms.MaskedTextBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.tbControlPrincipal.SuspendLayout();
             this.tbpMaestro.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -178,6 +180,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrProClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NudNoEmpresaGar)).BeginInit();
             this.SuspendLayout();
             // 
             // tbControlPrincipal
@@ -1076,6 +1079,9 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label49);
+            this.groupBox6.Controls.Add(this.txtRNCGar);
+            this.groupBox6.Controls.Add(this.NudNoEmpresaGar);
             this.groupBox6.Controls.Add(this.txtNoCuentaGarante);
             this.groupBox6.Controls.Add(this.label35);
             this.groupBox6.Controls.Add(this.txtSupervisorGarante);
@@ -1088,7 +1094,6 @@
             this.groupBox6.Controls.Add(this.label39);
             this.groupBox6.Controls.Add(this.txtCiudadEmpresaGarante);
             this.groupBox6.Controls.Add(this.txtSectorEmpresaGarante);
-            this.groupBox6.Controls.Add(this.txtNoEmpresaGarante);
             this.groupBox6.Controls.Add(this.txtCalleEmpresaGarante);
             this.groupBox6.Controls.Add(this.txtEmpresaGarante);
             this.groupBox6.Controls.Add(this.txtPuestoEmpresaGarante);
@@ -1203,13 +1208,6 @@
             this.txtSectorEmpresaGarante.Name = "txtSectorEmpresaGarante";
             this.txtSectorEmpresaGarante.Size = new System.Drawing.Size(216, 20);
             this.txtSectorEmpresaGarante.TabIndex = 42;
-            // 
-            // txtNoEmpresaGarante
-            // 
-            this.txtNoEmpresaGarante.Location = new System.Drawing.Point(88, 70);
-            this.txtNoEmpresaGarante.Name = "txtNoEmpresaGarante";
-            this.txtNoEmpresaGarante.Size = new System.Drawing.Size(216, 20);
-            this.txtNoEmpresaGarante.TabIndex = 41;
             // 
             // txtCalleEmpresaGarante
             // 
@@ -1394,6 +1392,37 @@
             // 
             this.ErrProClientes.ContainerControl = this;
             // 
+            // NudNoEmpresaGar
+            // 
+            this.NudNoEmpresaGar.Enabled = false;
+            this.NudNoEmpresaGar.Location = new System.Drawing.Point(88, 71);
+            this.NudNoEmpresaGar.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.NudNoEmpresaGar.Name = "NudNoEmpresaGar";
+            this.NudNoEmpresaGar.Size = new System.Drawing.Size(160, 20);
+            this.NudNoEmpresaGar.TabIndex = 51;
+            // 
+            // txtRNCGar
+            // 
+            this.txtRNCGar.Location = new System.Drawing.Point(619, 153);
+            this.txtRNCGar.Mask = "000-000-0000";
+            this.txtRNCGar.Name = "txtRNCGar";
+            this.txtRNCGar.PromptChar = ' ';
+            this.txtRNCGar.Size = new System.Drawing.Size(118, 20);
+            this.txtRNCGar.TabIndex = 52;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(616, 137);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(47, 13);
+            this.label49.TabIndex = 53;
+            this.label49.Text = "Ingresos";
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1429,6 +1458,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrProClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NudNoEmpresaGar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1532,7 +1562,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtCiudadEmpresaGarante;
         private System.Windows.Forms.TextBox txtSectorEmpresaGarante;
-        private System.Windows.Forms.TextBox txtNoEmpresaGarante;
         private System.Windows.Forms.TextBox txtCalleEmpresaGarante;
         private System.Windows.Forms.TextBox txtEmpresaGarante;
         private System.Windows.Forms.TextBox txtPuestoEmpresaGarante;
@@ -1563,5 +1592,8 @@
         private System.Windows.Forms.ComboBox cmbEstatus;
         private System.Windows.Forms.TabPage tbpDatosLaboralesCli;
         private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.NumericUpDown NudNoEmpresaGar;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.MaskedTextBox txtRNCGar;
     }
 }
