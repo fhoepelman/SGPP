@@ -22,7 +22,7 @@ namespace DataAccess
    
         {
            
-            SqlCommand ObjCmd = new SqlCommand("Sp_InsertClientes", Connection.Get);
+            SqlCommand ObjCmd = new SqlCommand("Sp_Insert", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
 
             Connection.Get.Open();
