@@ -21,17 +21,19 @@ namespace aPresentacion
         {
             InitializeComponent();
             //btnNuevo.Click += new EventHandler(btnNuevo_Click);
+            btnGuardar.Click += new EventHandler(btnGuardar_Click);
 
         }
 
-        void btnNuevo_Click(object sender, EventArgs e)
+        void btnGuardar_Click(object sender, EventArgs e)
         {
 
             //Cliente x = new Cliente();
             //x.FaxEmp = "asdf";
-            
 
+            MessageBox.Show("sdaf");
 
+            Entidades.Clientes ObjClientesEntidad = new Entidades.Clientes();
 
            
            
