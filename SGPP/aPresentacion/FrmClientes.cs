@@ -79,7 +79,7 @@ namespace aPresentacion
             ObjClientesEntidad.NoEmpresaGar = NudNoEmpresaGar.Value;
             ObjClientesEntidad.RNCGar = txtRNCGar.Text;
             
-
+           
 
         }
 
