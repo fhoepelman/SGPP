@@ -62,7 +62,7 @@ namespace aPresentacion
             ObjClientesEntidad.ApellidoGar = txtApellidoGarante.Text;
             ObjClientesEntidad.CedulaGar = txtCedulaGarante.Text;
             ObjClientesEntidad.TelefonoGar = txtTelefonoGarante.Text;
-            ObjClientesEntidad.CedulaGar = txtCelular.Text;
+            ObjClientesEntidad.CelularGar = txtCelular.Text;
             ObjClientesEntidad.EmailGar = txtEmail.Text;
             ObjClientesEntidad.DireccionGar = txtDireccionGarante.Text;
             ObjClientesEntidad.DescripcionGarantia = txtDescripcionGarantia.Text;
