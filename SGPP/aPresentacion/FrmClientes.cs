@@ -28,12 +28,8 @@ namespace aPresentacion
         void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            //Cliente x = new Cliente();
-            //x.FaxEmp = "asdf";
-
-            MessageBox.Show("sdaf");
-
             Entidades.Clientes ObjClientesEntidad = new Entidades.Clientes();
+            BussinessLogic.ClientesBL ObjClientesLogica = new BussinessLogic.ClientesBL();
 
             ObjClientesEntidad.CodCliente = txtCliente.Text;
             ObjClientesEntidad.Nombre = txtNombre.Text;
@@ -83,8 +79,8 @@ namespace aPresentacion
             ObjClientesEntidad.FechaIngresoGar = DtpFechaIngresoGarante.Value;
             ObjClientesEntidad.NoCuentaGar = txtNoCuentaGarante.Text;
 
-            
-           
+
+            ObjClientesLogica.Clientes(ObjClientesEntidad);
 
         }
 
