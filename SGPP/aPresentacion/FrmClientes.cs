@@ -44,14 +44,12 @@ namespace aPresentacion
             ObjClientesEntidad.Celular = txtCelular.Text;
             ObjClientesEntidad.Fax = txtFax.Text;
             ObjClientesEntidad.FechaNaci = DtpFechaNaci.Value;
-
             ObjClientesEntidad.CalleoAv = txtCalle.Text;
             ObjClientesEntidad.NoVivienda = NudNoVivienda.Value;
             ObjClientesEntidad.Sector = txtSector.Text;
             ObjClientesEntidad.Ciudad = txtCiudad.Text;
             ObjClientesEntidad.Email = txtEmail.Text;
             ObjClientesEntidad.Nodependiente = NudNoDependientes.Value;
-            
             ObjClientesEntidad.Empresa = txtNombreEmpresa.Text;
             ObjClientesEntidad.CalleoAvEmpresa = txtCalleEmpresa.Text;
             ObjClientesEntidad.NoEmpresa = NudNoEmpresa.Value;
@@ -64,7 +62,6 @@ namespace aPresentacion
             ObjClientesEntidad.Ingresos = NudNoDependientes.Value;
             ObjClientesEntidad.FechaIngreso = DtpFechaIngreso.Value;
             ObjClientesEntidad.NoCuenta = txtNoCuenta.Text;
-
             ObjClientesEntidad.NombreGar = txtNombreGarante.Text;
             ObjClientesEntidad.ApellidoGar = txtApellidoGarante.Text;
             ObjClientesEntidad.CedulaGar = txtCedulaGarante.Text;
@@ -73,11 +70,19 @@ namespace aPresentacion
             ObjClientesEntidad.EmailGar = txtEmail.Text;
             ObjClientesEntidad.DireccionGar = txtDireccionGarante.Text;
             ObjClientesEntidad.DescripcionGarantia = txtDescripcionGarantia.Text;
-
             ObjClientesEntidad.EmpresaGar = txtEmpresaGarante.Text;
-            ObjClientesEntidad.CalleoAvEmpresaGar = txtCalleEmpresaGarante.Textf;
+            ObjClientesEntidad.CalleoAvEmpresaGar = txtCalleEmpresaGarante.Text;
             ObjClientesEntidad.NoEmpresaGar = NudNoEmpresaGar.Value;
             ObjClientesEntidad.RNCGar = txtRNCGar.Text;
+            ObjClientesEntidad.CiudadEmpGar = txtCiudadEmpresaGarante.Text;
+            ObjClientesEntidad.TelefonoEmpGar = txtTelefonoEmpresaGarante.Text;
+            ObjClientesEntidad.FaxEmpGar = txtFaxEmpresa.Text;
+            ObjClientesEntidad.PuestoGar = txtPuestoEmpresaGarante.Text;
+            //Componente de Ingresos
+            ObjClientesEntidad.IngresosGar = NudNoDependientes.Value;
+            ObjClientesEntidad.FechaIngresoGar = DtpFechaIngresoGarante.Value;
+            ObjClientesEntidad.NoCuentaGar = txtNoCuentaGarante.Text;
+
             
            
 
