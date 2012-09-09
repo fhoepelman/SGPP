@@ -26,18 +26,16 @@ namespace BussinessLogic
 
 
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
+        
+            int x;
+            x = ObjClientesDA.SearchClientes(ObjClientesEntidad);
+           
 
-            if (ObjClientesDA.SearchClientes(ObjClientesEntidad) == 1)
-            {
-                MessageBox.Show("1");
+                MessageBox.Show(Convert.ToString(x));
 
-            }
-            else
-            {
-                MessageBox.Show("0");
 
                 //ObjClientesDA.InsertClientes(ObjClientesEntidad);
-            }
+          
 
             
            
