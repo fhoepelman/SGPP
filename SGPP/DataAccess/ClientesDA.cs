@@ -105,13 +105,11 @@ namespace DataAccess
 
             SqlParameter Prm = ObjCmd.Parameters.Add("@Returns", SqlDbType.Bit);
             Prm.Direction = ParameterDirection.Output;
-            //Prm.Value = cmbAccount.Text;
-
-          
+            ObjCmd.ExecuteNonQuery();
+            Connection.Get.Close();
 
             return Convert.ToInt32( (ObjCmd.Parameters["@Returns"].Value));
 
-            Connection.Get.Close();
         }
 
    

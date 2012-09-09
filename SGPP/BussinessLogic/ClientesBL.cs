@@ -27,14 +27,24 @@ namespace BussinessLogic
 
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
         
-            int x;
-            x = ObjClientesDA.SearchClientes(ObjClientesEntidad);
+         
+            if (ObjClientesDA.SearchClientes(ObjClientesEntidad) == 1)
+            {
+
+                ObjClientesEntidad.Accion = "1";
+
+            }
+            else
+            {
+
+                ObjClientesDA.InsertClientes(ObjClientesEntidad);
+                MessageBox.Show("Registro Guardado Correctamente");
+            }
            
 
-                MessageBox.Show(Convert.ToString(x));
+                
 
 
-                //ObjClientesDA.InsertClientes(ObjClientesEntidad);
           
 
             

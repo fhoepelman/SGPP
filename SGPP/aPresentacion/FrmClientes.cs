@@ -214,6 +214,15 @@ namespace aPresentacion
 
             ObjClienteLogica.Clientes(ObjClienteEntidad);
 
+            if (ObjClienteEntidad.Accion == "1")
+            {
+                ErrProClientes.SetError(txtCliente, "Este Cliente Existe En Nuestra Base De Datos");
+                txtCliente.Focus();
+            }
+            else
+            {
+                ErrProClientes.SetError(txtCliente, null);
+            }
             
         }
 
