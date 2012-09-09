@@ -31,6 +31,7 @@ namespace BussinessLogic
             if (ObjClientesDA.SearchClientes(ObjClientesEntidad) == 1)
             {
 
+                //Indica que el Cliente ya existe en la BD
                 ObjClientesEntidad.Accion = "1";
 
             }
