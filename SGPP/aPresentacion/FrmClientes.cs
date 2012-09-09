@@ -206,13 +206,13 @@ namespace aPresentacion
 
         private void txtCliente_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            BussinessLogic.ClientesBL ObjClienteLogica = new BussinessLogic.ClientesBL();
-            Entidades.Clientes ObjClienteEntidad = new Entidades.Clientes();
+            //BussinessLogic.ClientesBL ObjClienteLogica = new BussinessLogic.ClientesBL();
+            //Entidades.Clientes ObjClienteEntidad = new Entidades.Clientes();
 
 
-            ObjClienteEntidad.CodCliente = txtCliente.Text;
+            //ObjClienteEntidad.CodCliente = txtCliente.Text;
 
-            ObjClienteLogica.Clientes(ObjClienteEntidad);
+            //ObjClienteLogica.Clientes(ObjClienteEntidad);
 
             
         }
