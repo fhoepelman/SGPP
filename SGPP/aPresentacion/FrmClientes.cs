@@ -216,7 +216,7 @@ namespace aPresentacion
 
             if (ObjClienteEntidad.Accion == "1")
             {
-                ErrProClientes.SetError(txtCliente, "Este Cliente Existe En Nuestra Base De Datos");
+                ErrProClientes.SetError(txtCliente, "El Cliente " +txtCliente.Text  + " Ya Existe En Nuestra Base De Datos");
                 txtCliente.Focus();
             }
             else
