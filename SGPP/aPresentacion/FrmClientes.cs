@@ -211,8 +211,11 @@ namespace aPresentacion
 
 
             ObjClienteEntidad.CodCliente = txtCliente.Text;
+            ObjClienteEntidad.FechaIngreso = DtpFechaIngreso.Value;
+            ObjClienteEntidad.FechaIngresoGar = DtpFechaIngresoGarante.Value;
+            ObjClienteEntidad.FechaNaci = DtpFechaNaci.Value;
 
-            ObjClienteLogica.Clientes(ObjClienteEntidad);
+           
 
             if (ObjClienteEntidad.Accion == "1")
             {
