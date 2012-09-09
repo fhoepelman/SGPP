@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Entidades;
-
+using System.Windows.Forms;
 //Capa de Logica De Negocio
 namespace BussinessLogic
 {
@@ -27,10 +27,19 @@ namespace BussinessLogic
 
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
 
-      
-            
+            if (ObjClientesDA.SearchClientes(ObjClientesEntidad) == 1)
+            {
+                MessageBox.Show("sfasfsdf");
 
-            ObjClientesDA.InsertClientes(ObjClientesEntidad);
+            }
+            else
+            {
+
+                ObjClientesDA.InsertClientes(ObjClientesEntidad);
+            }
+
+            
+           
 
             
         

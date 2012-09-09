@@ -108,7 +108,7 @@ namespace DataAccess
             //Prm.Value = cmbAccount.Text;
 
 
-            return Convert.ToInt16( Prm.Value);
+            return Convert.ToInt32( (ObjCmd.Parameters["@Returns"].Value));
 
 
         }
