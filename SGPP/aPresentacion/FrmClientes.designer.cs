@@ -1115,9 +1115,9 @@
             this.label49.AutoSize = true;
             this.label49.Location = new System.Drawing.Point(616, 137);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(47, 13);
+            this.label49.Size = new System.Drawing.Size(30, 13);
             this.label49.TabIndex = 53;
-            this.label49.Text = "Ingresos";
+            this.label49.Text = "RNC";
             // 
             // txtRNCGar
             // 
