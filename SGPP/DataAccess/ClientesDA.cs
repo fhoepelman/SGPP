@@ -107,6 +107,7 @@ namespace DataAccess
             Prm.Direction = ParameterDirection.Output;
             //Prm.Value = cmbAccount.Text;
 
+            Connection.Get.Close();
 
             return Convert.ToInt32( (ObjCmd.Parameters["@Returns"].Value));
 

@@ -29,13 +29,14 @@ namespace BussinessLogic
 
             if (ObjClientesDA.SearchClientes(ObjClientesEntidad) == 1)
             {
-                MessageBox.Show("sfasfsdf");
+                MessageBox.Show("1");
 
             }
             else
             {
+                MessageBox.Show("0");
 
-                ObjClientesDA.InsertClientes(ObjClientesEntidad);
+                //ObjClientesDA.InsertClientes(ObjClientesEntidad);
             }
 
             
