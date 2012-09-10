@@ -206,26 +206,27 @@ namespace aPresentacion
 
         private void txtCliente_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
+
+            //Declaramos la variables de BussinessLogic y Entidades de Clientes
             BussinessLogic.ClientesBL ObjClienteLogica = new BussinessLogic.ClientesBL();
             Entidades.Clientes ObjClienteEntidad = new Entidades.Clientes();
 
 
+            //Asignamos el valor del txtcliente a la entidad del cliente
             ObjClienteEntidad.CodCliente = txtCliente.Text;
-            ObjClienteEntidad.FechaIngreso = DtpFechaIngreso.Value;
-            ObjClienteEntidad.FechaIngresoGar = DtpFechaIngresoGarante.Value;
-            ObjClienteEntidad.FechaNaci = DtpFechaNaci.Value;
+          
 
-            ObjClienteLogica.Clientes(ObjClienteEntidad);
-
-            if (ObjClienteEntidad.Accion == "1")
-            {
-                ErrProClientes.SetError(txtCliente, "El Cliente " +txtCliente.Text  + " Ya Existe En Nuestra Base De Datos");
-                txtCliente.Focus();
-            }
-            else
-            {
-                ErrProClientes.SetError(txtCliente, null);
-            }
+        
+            //Si es Igual a 1 quiere decir que el cliente existe en la base de datos
+          if (ObjClienteLogica.SearchClientes(ObjClienteEntidad) == 1)
+          {
+              ErrProClientes.SetError(txtCliente, "El Cliente " + txtCliente.Text + " Ya Existe En Nuestra Base De Datos");
+              txtCliente.Focus();
+          }
+          else
+          {
+              ErrProClientes.SetError(txtCliente, null);
+          }
             
         }
 
