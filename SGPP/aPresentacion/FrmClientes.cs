@@ -215,7 +215,7 @@ namespace aPresentacion
             ObjClienteEntidad.FechaIngresoGar = DtpFechaIngresoGarante.Value;
             ObjClienteEntidad.FechaNaci = DtpFechaNaci.Value;
 
-           
+            ObjClienteLogica.Clientes(ObjClienteEntidad);
 
             if (ObjClienteEntidad.Accion == "1")
             {
