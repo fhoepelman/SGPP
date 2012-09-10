@@ -16,15 +16,7 @@ namespace BussinessLogic
            
         {
 
-
-            //Aqui van las Validaciones de Lugar
-
-            //ValidarControles chare = new ValidarControles();
-
-            //chare.ValidarTelefono(ObjClientesEn.Telefono, "Holaaaa");
-     
-
-
+            //Aqui van las Validaciones de Lugar     
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
         
          
@@ -33,30 +25,21 @@ namespace BussinessLogic
 
                 //Indica que el Cliente ya existe en la BD
                 ObjClientesEntidad.Accion = "1";
+                return;
 
             }
-            else
-            {
-
                 ObjClientesDA.InsertClientes(ObjClientesEntidad);
                 MessageBox.Show("Registro Guardado Correctamente");
-            }
-           
-
-                
-
-
-          
-
-            
-           
-
-            
-        
-        
         }
 
 
+        public void SearchClientes(Entidades.Clientes ObjClientesEntidad)
+        {
+            DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
+        
+        
+        
+        }
 
     }
 }
