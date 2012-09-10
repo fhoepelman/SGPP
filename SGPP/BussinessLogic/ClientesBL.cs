@@ -20,26 +20,21 @@ namespace BussinessLogic
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
         
          
-            if (ObjClientesDA.SearchClientes(ObjClientesEntidad) == 1)
-            {
 
-                //Indica que el Cliente ya existe en la BD
-                ObjClientesEntidad.Accion = "1";
-                return;
-
-            }
                 ObjClientesDA.InsertClientes(ObjClientesEntidad);
                 MessageBox.Show("Registro Guardado Correctamente");
         }
 
 
-        public void SearchClientes(Entidades.Clientes ObjClientesEntidad)
+        public int SearchClientes(Entidades.Clientes ObjClientesEntidad)
         {
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
+
+            return ObjClientesDA.SearchClientes(ObjClientesEntidad);
+          
+            }
         
-        
-        
-        }
+      
 
     }
 }
