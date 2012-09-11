@@ -12,14 +12,13 @@ namespace BussinessLogic
 
 
         //Metodo para Recibir los datos de la capa de Presentacion y enviarlos a DataAccess
-        public void Clientes (Entidades.Clientes ObjClientesEntidad)
+        public void InsertClientes (Entidades.Clientes ObjClientesEntidad)
            
         {
 
             //Aqui van las Validaciones de Lugar     
             DataAccess.ClientesDA ObjClientesDA = new DataAccess.ClientesDA();
         
-         
 
                 ObjClientesDA.InsertClientes(ObjClientesEntidad);
                 MessageBox.Show("Registro Guardado Correctamente");
