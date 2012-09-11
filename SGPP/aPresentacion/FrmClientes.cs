@@ -18,15 +18,29 @@ namespace aPresentacion
 
 
         //Estado de la Ventana Cliente
-        public const string EDITAR = "Editando";
-        public const string NUEVO = "Creando";
+        public  string ESTADO_SISTEMA = "";
+     
     
 
         public FrmClientes()
         {
             InitializeComponent();
-            //btnNuevo.Click += new EventHandler(btnNuevo_Click);
+            btnNuevo.Click += new EventHandler(btnNuevo_Click);
+            btnEditar.Click += new EventHandler(btnEditar_Click);
             btnGuardar.Click += new EventHandler(btnGuardar_Click);
+
+        }
+
+
+        void btnNuevo_Click(object sender, EventArgs e)
+        {
+            ESTADO_SISTEMA = "Creando";
+        
+        }
+
+        void btnEditar_Click(object sender, EventArgs e)
+        {
+            ESTADO_SISTEMA = "Editando";
 
         }
 
@@ -84,8 +98,16 @@ namespace aPresentacion
             ObjClientesEntidad.FechaIngresoGar = DtpFechaIngresoGarante.Value;
             ObjClientesEntidad.NoCuentaGar = txtNoCuentaGarante.Text;
 
+            if (ESTADO_SISTEMA == "Creando")
+            {
 
-            ObjClientesLogica.InsertClientes(ObjClientesEntidad);
+                ObjClientesLogica.InsertClientes(ObjClientesEntidad);
+            }
+            else
+            {
+                ObjClientesLogica.UpdateClientes(ObjClientesEntidad);
+            
+            }
 
         }
 
@@ -212,26 +234,26 @@ namespace aPresentacion
         private void txtCliente_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
-            //Declaramos la variables de BussinessLogic y Entidades de Clientes
-            BussinessLogic.ClientesBL ObjClienteLogica = new BussinessLogic.ClientesBL();
-            Entidades.Clientes ObjClienteEntidad = new Entidades.Clientes();
+          //  //Declaramos la variables de BussinessLogic y Entidades de Clientes
+          //  BussinessLogic.ClientesBL ObjClienteLogica = new BussinessLogic.ClientesBL();
+          //  Entidades.Clientes ObjClienteEntidad = new Entidades.Clientes();
 
 
-            //Asignamos el valor del txtcliente a la entidad del cliente
-            ObjClienteEntidad.CodCliente = txtCliente.Text;
+          //  //Asignamos el valor del txtcliente a la entidad del cliente
+          //  ObjClienteEntidad.CodCliente = txtCliente.Text;
           
 
         
-            //Si es Igual a 1 quiere decir que el cliente existe en la base de datos
-          if (ObjClienteLogica.SearchClientes(ObjClienteEntidad) == 1)
-          {
-              ErrProClientes.SetError(txtCliente, "El Cliente " + txtCliente.Text + " Ya Existe En Nuestra Base De Datos");
-              txtCliente.Focus();
-          }
-          else
-          {
-              ErrProClientes.SetError(txtCliente, null);
-          }
+          //  //Si es Igual a 1 quiere decir que el cliente existe en la base de datos
+          //if (ObjClienteLogica.SearchClientes(ObjClienteEntidad) == 1)
+          //{
+          //    ErrProClientes.SetError(txtCliente, "El Cliente " + txtCliente.Text + " Ya Existe En Nuestra Base De Datos");
+          //    txtCliente.Focus();
+          //}
+          //else
+          //{
+          //    ErrProClientes.SetError(txtCliente, null);
+          //}
             
         }
 
