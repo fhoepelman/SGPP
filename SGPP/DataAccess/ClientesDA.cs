@@ -88,7 +88,7 @@ namespace DataAccess
             Connection.Get.Open();
 
 
-            //ObjCmd.Parameters.Add(new SqlParameter("@CodCliente", ObjClientesEntidad.CodCliente) { SqlDbType = SqlDbType.NVarChar });
+            ObjCmd.Parameters.Add(new SqlParameter("@CodCliente", ObjClientesEntidad.CodCliente) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Nombre", ObjClientesEntidad.Nombre) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Apellido", ObjClientesEntidad.Apellido) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Cedula", ObjClientesEntidad.Cedula) { SqlDbType = SqlDbType.NVarChar });
