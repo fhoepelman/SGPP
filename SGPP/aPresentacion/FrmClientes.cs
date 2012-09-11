@@ -15,6 +15,11 @@ namespace aPresentacion
 
         ValidarControles VC = new ValidarControles();
         //AdministrarControles AC = new AdministrarControles();
+
+
+        //Estado de la Ventana Cliente
+        public const string EDITAR = "Editando";
+        public const string NUEVO = "Creando";
     
 
         public FrmClientes()
@@ -80,7 +85,7 @@ namespace aPresentacion
             ObjClientesEntidad.NoCuentaGar = txtNoCuentaGarante.Text;
 
 
-            ObjClientesLogica.Clientes(ObjClientesEntidad);
+            ObjClientesLogica.InsertClientes(ObjClientesEntidad);
 
         }
 
