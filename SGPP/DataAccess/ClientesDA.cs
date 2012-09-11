@@ -14,9 +14,6 @@ namespace DataAccess
     // Clase Para Manipular Clientes de la Capa de Accesoo
   public  class ClientesDA
     {
-
-       
-      
       //Metodo para insertar Clientes 
       public void InsertClientes(Entidades.Clientes ObjClientesEntidad)
    
@@ -24,9 +21,7 @@ namespace DataAccess
            
             SqlCommand ObjCmd = new SqlCommand("Sp_Insert_Cli", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
-
             Connection.Get.Open();
-
 
             ObjCmd.Parameters.Add(new SqlParameter("@CodCliente", ObjClientesEntidad.CodCliente) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Nombre", ObjClientesEntidad.Nombre) { SqlDbType = SqlDbType.NVarChar });
@@ -77,16 +72,13 @@ namespace DataAccess
             ObjCmd.ExecuteNonQuery();
             Connection.Get.Close();
 
-        
         }
 
         public void UpdateClientes(Entidades.Clientes ObjClientesEntidad)
         {
             SqlCommand ObjCmd = new SqlCommand("Sp_Update_Cli", Connection.Get);
             ObjCmd.CommandType = CommandType.StoredProcedure;
-
             Connection.Get.Open();
-
 
             ObjCmd.Parameters.Add(new SqlParameter("@CodCliente", ObjClientesEntidad.CodCliente) { SqlDbType = SqlDbType.NVarChar });
             ObjCmd.Parameters.Add(new SqlParameter("@Nombre", ObjClientesEntidad.Nombre) { SqlDbType = SqlDbType.NVarChar });
