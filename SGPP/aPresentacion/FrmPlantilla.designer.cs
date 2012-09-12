@@ -67,7 +67,7 @@
             // 
             // btnNuevo
             // 
-            //this.btnNuevo.Image = global::aPresentacion.Properties.Resources.add;
+            this.btnNuevo.Image = global::aPresentacion.Properties.Resources.add;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(62, 22);
@@ -77,19 +77,17 @@
             // 
             // btnGuardar
             // 
-            //this.btnGuardar.Image = global::aPresentacion.Properties.Resources.save;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(69, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(53, 22);
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.ToolTipText = "Guardar Registro";
             // 
             // btnEditar
             // 
-            //this.btnEditar.Image = global::aPresentacion.Properties.Resources.Edit;
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(60, 22);
+            this.btnEditar.Size = new System.Drawing.Size(44, 22);
             this.btnEditar.Text = "Editar ";
             this.btnEditar.ToolTipText = "Editar Registro";
             // 
@@ -99,37 +97,33 @@
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // btnCancelar
-
-            //this.btnCancelar.Image = global::aPresentacion.Properties.Resources.Cancel;
+            // 
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(57, 22);
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.ToolTipText = "Cancelar Registro";
             // 
             // btnImprimir
             // 
-            //this.btnImprimir.Image = global::aPresentacion.Properties.Resources.Imprimir;
             this.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(73, 22);
+            this.btnImprimir.Size = new System.Drawing.Size(57, 22);
             this.btnImprimir.Text = "Imprimir";
             // 
             // btnBuscar
             // 
-            //this.btnBuscar.Image = global::aPresentacion.Properties.Resources.Buscar;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(62, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 22);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.ToolTipText = "Buscar Registro";
             // 
             // btnEliminar
             // 
-            //this.btnEliminar.Image = global::aPresentacion.Properties.Resources.Delete;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(54, 22);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.ToolTipText = "Eliminar Registro";
             // 
@@ -140,10 +134,9 @@
             // 
             // btnSalir
             // 
-            //this.btnSalir.Image = global::aPresentacion.Properties.Resources.door_in;
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(49, 22);
+            this.btnSalir.Size = new System.Drawing.Size(33, 22);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
